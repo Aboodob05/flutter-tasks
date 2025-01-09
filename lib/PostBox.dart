@@ -12,8 +12,9 @@ class PostBox extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         height: 250,
         decoration: BoxDecoration(
-            color: Colors.pink[100],
-          image: DecorationImage(image: pim!.image,
+            color: Colors.pinkAccent,
+          image: DecorationImage(
+              image: pim!.image,
             fit: BoxFit.cover)
           )
         ),

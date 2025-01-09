@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class StoryBox extends StatelessWidget {
   Image? im;
   StoryBox({required this.im});
@@ -11,9 +12,10 @@ class StoryBox extends StatelessWidget {
         height: 80,
         width: 80,
         decoration: BoxDecoration(
-          image: DecorationImage(image: im!.image,
+          image: DecorationImage(
+              image: im!.image,
               fit: BoxFit.cover),
-            color: Colors.redAccent[200],
+            color: Colors.redAccent,
             shape: BoxShape.circle
         ),
 
