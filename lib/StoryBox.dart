@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
 
 class StoryBox extends StatelessWidget {
-  Image? im;
-  StoryBox({required this.im});
+  Icon? im;
+  double? w;
+  double? h;
+  Color? c;
+  StoryBox({this.im,required this.w,required this.h,required this.c});
 
   @override
   Widget build(BuildContext context) {
     return  Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        height: 80,
-        width: 80,
+        height: w,
+        width: h,
         decoration: BoxDecoration(
-          image: DecorationImage(
-              image: im!.image,
-              fit: BoxFit.cover),
-            color: Colors.redAccent,
+            color: c,
             shape: BoxShape.circle
         ),
+        child: im,
 
       ),
     );

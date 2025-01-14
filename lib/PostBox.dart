@@ -1,24 +1,23 @@
 import 'package:flutter/material.dart';
+
 class PostBox extends StatelessWidget {
-  Image? pim;
-  PostBox ({required this.pim});
+  dynamic pim;
+
+  PostBox({required this.pim});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Container(
-
-        width: MediaQuery.of(context).size.width,
-        height: 250,
-        decoration: BoxDecoration(
-            color: Colors.pinkAccent,
-          image: DecorationImage(
-              image: pim!.image,
-            fit: BoxFit.cover)
-          )
+      child: Center(
+        child: Container(
+          width: 50,
+          height: 50,
+          color: Colors.white,
+          child: Center(child: pim is IconData? Icon(pim,size:25) : Text(pim,style: TextStyle(fontSize: 25)),
+          ),
         ),
-
+      ),
     );
   }
 }
