@@ -4,12 +4,12 @@ import 'customizeWidget/txtformfil.dart';
 class loginform extends StatefulWidget {
 
   @override
-  State<loginform> createState() => _loginformState();
+  State createState() => _loginformState();
 }
 
 class _loginformState extends State<loginform> {
   @override
-  final _formKey = GlobalKey<FormState>();
+  final Key = GlobalKey<FormState>();
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
@@ -18,7 +18,7 @@ class _loginformState extends State<loginform> {
         backgroundColor: Colors.blue,
       ),
       body: Form(
-          key:_formKey ,
+          key:Key ,
           child: Column(
         children: [SizedBox(height: 50),
 
@@ -29,7 +29,7 @@ class _loginformState extends State<loginform> {
           SizedBox(height: 50),
 
           ElevatedButton(onPressed: (){
-            if(_formKey.currentState!.validate()){
+            if(Key.currentState!.validate()){
               print("No error");
             }
             else{print("no eror");}
