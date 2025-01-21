@@ -32,7 +32,6 @@ class _loginformState extends State<loginform> {
             if(Key.currentState!.validate()){
               print("No error");
             }
-            else{print("no eror");}
           }, child: Text("Login"))
         ],
       ))
